@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MOJOReplicatorView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFJ-e1-Oa5" customClass="MOJOReplicatorView" customModule="MOJOReplicatorView" customModuleProvider="target">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iFJ-e1-Oa5" secondAttribute="height" multiplier="1:1" id="bj7-Gf-7ei"/>
+                                    <constraint firstAttribute="width" constant="300" id="g5w-cd-C7z"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7Y-XA-na9">
+                                <rect key="frame" x="284" y="502" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateReplicator:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="anG-mr-2GX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="iFJ-e1-Oa5" secondAttribute="centerY" id="Z5D-57-ZU5"/>
+                            <constraint firstAttribute="centerX" secondItem="iFJ-e1-Oa5" secondAttribute="centerX" id="fsx-Ui-DYw"/>
+                            <constraint firstItem="c7Y-XA-na9" firstAttribute="top" secondItem="iFJ-e1-Oa5" secondAttribute="bottom" constant="52" id="tjV-w4-hmf"/>
+                            <constraint firstAttribute="centerX" secondItem="c7Y-XA-na9" secondAttribute="centerX" id="xYQ-0N-Cd1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="replicator" destination="iFJ-e1-Oa5" id="K3F-ji-2NL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="482" y="386"/>
+        </scene>
+    </scenes>
+</document>
